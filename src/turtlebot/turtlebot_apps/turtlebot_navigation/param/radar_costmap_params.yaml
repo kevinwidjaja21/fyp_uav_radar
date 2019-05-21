@@ -1,0 +1,14 @@
+local_costmap:
+  obstacle_layer:
+    scan:
+      topic: xyzi_filt_out
+
+global_costmap:
+  obstacle_layer:
+    scan:
+      topic: xyzi_filt_out
+  inflation_layer:
+    cost_scaling_factor:  3.5  # exponential rate at which the obstacle cost drops off (default: 10)
+    inflation_radius:     0.5  # max. distance from an obstacle at which costs are incurred for planning paths.
+
+
