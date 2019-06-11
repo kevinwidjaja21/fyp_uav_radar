@@ -11,4 +11,17 @@ Assuming you already installed ROS Kinetic Full desktop version and using Ubuntu
      Make sure that there is an “src” folder inside the catkin workspace.
   4. Build the catkin workspace using “catkin_make” command
 
-To run the code
+To run the code for collision avoidance, type these 3 commands in order:
+  1. roslaunch mavros px4.launch (start MAVROS and MAVLink communication)
+  2. roslaunch uav_radar px4_tf.launch
+  3. roslaunch turtlebot_mmwave_launchers radar_nav_uav1.launch
+  
+For mapping, change the last command to "roslaunch turtlebot_mmwave_launchers radar_mapping.launch"
+
+To see the radar visulatization run RVIZ with follwing commands
+
+- rosrun rviz rviz -d ~/rdr1/src/turtlebot_mmwave_launchers/launch/navigation_visualization.rviz
+
+or
+
+- rosrun rviz rviz -d ~/rdr1/src//turtlebot_mmwave_launchers/launch/mapping_visualization.rviz
