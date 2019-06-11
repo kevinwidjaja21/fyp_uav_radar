@@ -21,7 +21,5 @@ For mapping, change the last command to "roslaunch turtlebot_mmwave_launchers ra
 To see the radar visulatization run RVIZ with follwing commands
 
 - rosrun rviz rviz -d ~/rdr1/src/turtlebot_mmwave_launchers/launch/navigation_visualization.rviz
-
 or
-
 - rosrun rviz rviz -d ~/rdr1/src//turtlebot_mmwave_launchers/launch/mapping_visualization.rviz
