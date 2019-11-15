@@ -7,18 +7,18 @@ There are several steps needed to install the software.
 Assuming you already installed ROS Kinetic Full desktop version and using Ubuntu 16.04, you would have to:
   1. Install MAVROS package by following the instruction at [PX4 MAVROS Installation Page](https://dev.px4.io/en/ros/mavros_installation.html)
   2. Make an empty catkin workspace folder
-  3. Download the catkin workspace zip file from GitHub then copy the content of the zip into the workspace.Make sure that there is an “src” folder inside the catkin workspace.
-  4. Build the catkin workspace using “catkin_make” command
+  3. Download the catkin workspace zip file from GitHub then copy the content of the zip into the workspace. Make sure that there is an “src” folder inside the catkin workspace.
+  4. Build the catkin workspace using `catkin_make` command
   
 To run the code for collision avoidance, type these 3 commands in order:
-  1. 'roslaunch mavros px4.launch' (start MAVROS and MAVLink communication)
-  2. 'roslaunch uav_radar px4_tf.launch'
-  3. 'roslaunch turtlebot_mmwave_launchers radar_nav_uav1.launch'
+  1. `roslaunch mavros px4.launch` (start MAVROS and MAVLink communication)
+  2. `roslaunch uav_radar px4_tf.launch`
+  3. `roslaunch turtlebot_mmwave_launchers radar_nav_uav1.launch`
   
-For mapping, change the last command to 'roslaunch turtlebot_mmwave_launchers radar_mapping.launch'.
+For mapping, change the last command to `roslaunch turtlebot_mmwave_launchers radar_mapping.launch`.
   
 To see the radar visulatization run RVIZ with follwing commands
   
 To see the radar visulatization run RVIZ with following commands
-- 'rosrun rviz rviz -d ~/rdr1/src/turtlebot_mmwave_launchers/launch/navigation_visualization.rviz' for navigation demo or
-- 'rosrun rviz rviz -d ~/rdr1/src/turtlebot_mmwave_launchers/launch/mapping_visualization.rviz' for mapping demo
+- `rosrun rviz rviz -d ~/rdr1/src/turtlebot_mmwave_launchers/launch/navigation_visualization.rviz` for navigation demo or
+- `rosrun rviz rviz -d ~/rdr1/src/turtlebot_mmwave_launchers/launch/mapping_visualization.rviz` for mapping demo
